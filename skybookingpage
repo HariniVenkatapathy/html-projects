@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Book a tour</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div>
+            <div class="book">
+                <div class="navbar">
+                    <img src="Sky travels.png" class="logo">
+                    <ul>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Travel Tours</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <section class="flex">
+                       <form action="" method="post">
+                        <h3>Book Your Tour !</h3>
+                        <input type="text" name="First Name" required maxlength="30" placeholder="Enter First Name" class="box">
+                        <input type="text" name="Last Name" required maxlength="30" placeholder="Enter Last Name" class="box">
+                        <input type="text" name="Address" required maxlength="30" placeholder="Enter Address" class="box">
+                        <input type="text" name="Destination" required maxlength="30" placeholder="Enter Destination" class="box">
+                        <input type="date" name="Date" class="box" required>
+                        <input type="text" name="Phone Number" class="box" placeholder="Phone Number">
+                        <input type="submit" value="Book tour" name="Book" class="btn">
+
+                       </form> 
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
