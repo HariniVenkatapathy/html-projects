@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Sky travel Agency</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="Sky travels.png" class="logo">
+                <ul>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Travel Tours</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>TRAVEL TO YOUR DREAM DESTINATIONS</h1>
+                <div><a href="ata.html">
+                    <button type="button"><span></span>BOOK NOW</button></a>
+                    <button type="button"><span></span>CURRENT OFFERS!!</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
