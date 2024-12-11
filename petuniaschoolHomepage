@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Petunia School</title>
+        <link rel="stylesheet" href="schlhomestyle.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="petunialogo.png" class="logo">
+                <ul>
+                    <li><a href="#">H O M E</a></li>
+                    <li><a href="petuniaschoolenroll.html">A D M I S S I O N S</a></li>
+                    <li><a href="#">A C A D E M I C S</a></li>
+                    <li><a href="#">A B O U T - U S</a></li>
+                    <li><a href="#">C O N T A C T - U S</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>WELCOME  TO  PETUNIA  SCHOOLS</h1>
+                <div><a href="petuniaschoolenroll.html">
+                    <button type="button"><span></span>ADMISSIONS OPEN</button></a>
+                </div>
+            </div>    
+        </div>
+         <div class="block">
+                <div class="box">
+                <section class="flex">
+                    <p><b>FRIENDLY ENVIRONMENT</b><br>
+                        <br>
+                    "At our school, we pride ourselves on creating a warm and welcoming atmosphere where every student feels valued and supported. Our close-knit community fosters friendships that last a lifetime!"</P>
+                </section>
+            </div>
+            <div class="box1">
+                <section class="flex1">
+                    <p><b>LEARNING METHOD</b><br>
+                        <br>
+                        "Our innovative learning methods cater to every student's unique style, ensuring that no one is left behind. With a blend of hands-on activities, technology integration, and collaborative projects, we make learning engaging and effective!"</P>
+                </section>
+            </div>
+            <div class="box2">
+                <section class="flex2">
+                    <p><b>EXTRACURRICULAR ACTIVITIES</b><br>
+                        <br>
+                        "Our vibrant extracurricular programs offer students the chance to explore their passions, build confidence, and develop teamwork skills. From sports to arts, there’s something for everyone!"</P>
+                </section>
+            </div>
+        </div> 
+        <div class="classr">
+            <br>
+            <br>
+            <h1>STUDENTS WHO ACHIEVED THEIR DREAM BY STUDYING HERE</h1>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="legitboi.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <br>
+                    <br>
+                    <h1>OUR STUDENT AT OXFORD</h1>
+                    <br>
+                    <br>
+                    <p>"The teachers here guided me and made me achieve my dream of getting into oxford." </p>
+                  </div>
+                </div>
+            </div> 
+            <div class="flip-card1">
+                <div class="flip-card-inner1">
+                  <div class="flip-card-front1">
+                    <img src="legitgal.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back1">
+                    <br>
+                    <br>
+                    <h1>OUR STUDENT AT HARVARD</h1>
+                    <br>
+                    <br>
+                    <p>"This school provided me with knowledge enough to get into my dream college" </p>
+                  </div>
+                </div>
+            </div>   
+            <div class="flip-card2">
+            <div class="flip-card-inner2">
+                  <div class="flip-card-front2">
+                    <img src="workman.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back2">
+                    <br>
+                    <br>
+                    <h1>ALUMNI</h1>
+                    <br>
+                    <p>WORKS AT AMAZON</p>
+                    <br>
+                    <br>
+                    <p>"The basic knowledge and experience must be strong to lead you up the stairs and that was satisfied for me by this school" </p>
+                  </div>
+                </div>
+            </div>   
+        </div> 
+        <div class="last">
+            <br>
+            <h1>PETUNIA SCHOOLS</h1>
+            <br>
+            <p>3rd street, little city</p>
+            <p>ooty.</p>
+            <br>
+            <br>
+            <h1>CONTACT US</h1>
+            <br>
+            <p>email: petuniaschool@gmail.com</p>
+            <p>Contact number: 088-975674367 </p>
+            <br>
+        </div>
+    </body>
+</html>
