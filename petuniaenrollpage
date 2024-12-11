@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Enroll at petunia school</title>
+        <link rel="stylesheet" href="enrollstyle.css">
+    </head>
+    <body>
+        <div>
+            <div class="book">
+                <div class="navbar">
+                    <img src="petunialogo.png" class="logo">
+                    <ul>
+                        <li><a href="#">H O M E</a></li>
+                        <li><a href="#">A D M I S S I O N S</a></li>
+                        <li><a href="#">A C A D E M I C S</a></li>
+                        <li><a href="#">A B O U T - U S</a></li>
+                        <li><a href="#">C O N T A C T - U S</a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <section class="flex">
+                       <form action="" method="post">
+                        <h3>ADMISSION FORM</h3>
+                        <P>Enter Student Detail</P>
+                        <input type="text" name="Name" required maxlength="30" placeholder="Enter Name" class="box">
+                        <input type="text" name="Age" required maxlength="30" placeholder="Enter Age" class="box">
+                        <input type="text" name="DOB" required maxlength="30" placeholder="Enter DOB in words" class="box">
+                        <input type="text" name="Fathername" required maxlength="30" placeholder="Enter Father Name" class="box">
+                        <input type="text" name="Mothername" required maxlength="30" placeholder="Enter Mother Name" class="box">
+                        <input type="text" name="Phone Number" class="box" placeholder="Phone Number">
+                        <input type="email" id="email" name="email"placeholder="Enter Email" class="box" ><br>
+                        <input type="submit" value="submit" name="SUBMIT" class="btn">
+                       </form> 
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
