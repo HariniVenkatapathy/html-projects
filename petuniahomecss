@@ -1,0 +1,283 @@
+//contains css for petunia school home page
+*{
+    margin:0;
+    padding:0;
+    font-family: Georgia ;
+}
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(sch2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:120px ;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:aliceblue;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f45669;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: aliceblue;
+}
+.content h1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bolder;
+    border: 2px solid #f45669;
+    background: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #f45669;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.block{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.953),rgba(255, 255, 255, 0.904)),url(mathf.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.box{
+    padding-left: 200px;
+    padding-top: 100px;
+}
+.flex{
+    min-height: calc(150vh-20rem);
+    display: flex; 
+}
+.flex p{
+    background-color: rgb(244, 78, 78);
+    border-radius: .5rem;
+    padding: 1.3rem;
+    width: 30rem ;
+    backdrop-filter:blur(.4rem) ;
+    font-size: 1rem;
+    color: rgb(255, 223, 223);
+    padding-bottom: 1.3rem;
+    
+}
+.box1{
+    padding-left: 800px;
+    padding-top:  60px;
+}
+.flex1{
+    min-height: calc(150vh-20rem);
+    display: flex;
+}
+.flex1 p{
+    background-color: rgb(72, 110, 249);
+    border-radius: .5rem;
+    padding: 1.3rem;
+    width: 30rem ;
+    backdrop-filter:blur(.4rem) ;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    padding-bottom: 1.3rem;
+    
+}
+.box2{
+    padding-left: 200px;
+    padding-top: 60px;
+}
+.flex2{
+    min-height: calc(150vh-20rem);
+    display: flex;
+}
+.flex2 p{
+    background-color: rgb(206, 55, 244);
+    border-radius: .5rem;
+    padding: 1.3rem;
+    width: 30rem ;
+    backdrop-filter:blur(.4rem) ;
+    font-size: 1rem;
+    color: rgb(255, 251, 251);
+    padding-bottom: 1.3rem;  
+}
+.classr{
+    width:100%;
+    height:150vh;
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(class.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.classr h1{
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+
+}
+.flip-card {
+    padding-left: 200px;
+    padding-top: 100px;
+    float: top;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back {
+    background-color: rgb(46, 70, 95);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card1 {
+    padding-left: 600px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; 
+  }
+  .flip-card-inner1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card1:hover .flip-card-inner1 {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front1, .flip-card-back1 {
+    position:absolute ;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  .flip-card-front1 {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back1 {
+    background-color: rgb(46, 70, 95);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card2 {
+    padding-left: 1000px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; 
+  }
+  .flip-card-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card2:hover .flip-card-inner2 {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front2, .flip-card-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  .flip-card-front2 {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-back2 {
+    background-color: rgb(46, 70, 95);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .last{
+    background-color:#120e0f8f ;
+    color: black;
+    text-align: center;
+  }
+  .last h1{
+    font-size: 20px;
+  }
+  .last p{
+    font-size: 15px;
+  }
