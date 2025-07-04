@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .logout {
+      background-color: #f44336;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .container {
+      padding: 30px;
+    }
+    h2 {
+      color: #444;
+      margin-top: 30px;
+    }
+    #calendar {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .assignments, .grades {
+      background: white;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Student Dashboard</h1>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="container">
+    <h2>📅 Academic Calendar - July 2025</h2>
+    <div id="calendar"></div>
+
+    <h2>🕒 Weekly Timetable</h2>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>8:30–9:30</th>
+        <th>9:30–10:30</th>
+        <th>10:45–11:45</th>
+        <th>12:00–1:00</th>
+        <th>1:30–2:30</th>
+        <th>2:30–3:30</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td>Lunch</td>
+        <td>Computer Lab</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Biology</td>
+        <td>Math</td>
+        <td>History</td>
+        <td>English</td>
+        <td>Lunch</td>
+        <td>Physical Ed</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Physics</td>
+        <td>Math</td>
+        <td>Chemistry</td>
+        <td>Geography</td>
+        <td>Lunch</td>
+        <td>Drawing</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>English</td>
+        <td>History</td>
+        <td>Biology</td>
+        <td>Physics</td>
+        <td>Lunch</td>
+        <td>Library</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Computer</td>
+        <td>Math</td>
+        <td>Chemistry</td>
+        <td>English</td>
+        <td>Lunch</td>
+        <td>Sports</td>
+      </tr>
+    </table>
+
+    <div class="assignments">
+      <h2>📋 Upcoming Assignments</h2>
+      <ul>
+        <li>Math worksheet submission – July 21</li>
+        <li>Science project model – July 25</li>
+        <li>History essay – July 28</li>
+        <li>English speech draft – July 30</li>
+      </ul>
+    </div>
+
+    <div class="grades">
+      <h2>📊 Subject-wise Grade Overview</h2>
+      <table>
+        <tr><th>Subject</th><th>Grade</th><th>Remarks</th></tr>
+        <tr><td>Math</td><td>A</td><td>Excellent progress</td></tr>
+        <tr><td>English</td><td>B+</td><td>Work on grammar</td></tr>
+        <tr><td>Science</td><td>A-</td><td>Well done in lab</td></tr>
+        <tr><td>History</td><td>B</td><td>Improve writing</td></tr>
+        <tr><td>Computer</td><td>A</td><td>Consistent performance</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+          { title: 'Science Project Due', date: '2025-07-18' },
+          { title: 'English Oral Test', date: '2025-07-22' },
+          { title: 'Parent-Teacher Meet', date: '2025-07-25' },
+          { title: 'Quarterly Exams Start', date: '2025-08-20' },
+          { title: 'Group Activity Day', date: '2025-08-01' },
+          { title: 'Holiday - Independence Day', date: '2025-08-15' }
+        ]
+      });
+      calendar.render();
+    });
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

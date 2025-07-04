@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Georgia ;
+}
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(sch2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:120px ;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:aliceblue;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f45669;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.con h1{
+    position: absolute;
+    left:620px;
+    top: 300px;
+    font-size: 40px;
+    color: rgba(240, 248, 255, 0.732);
+    text-align: center;
+    padding: 20px;
+}
+.con p{
+    font-size: 20px;
+    position: absolute;
+    left:222px;
+    top: 430px;
+    color: rgba(240, 248, 255, 0.919);
+    text-align: center;
+}
+.jor{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(chuchu.png);
+    background-size: cover;
+    background-position: center;
+}
+.jor h1{
+    font-size: 40px;
+    color: rgba(240, 248, 255, 0.732);
+    text-align: center;
+    padding: 100px;
+}
+.not{
+    position: absolute;
+    right: 800px;
+    top: 930px;
+    background-color: rgba(1, 1, 1, 0.049);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.827);
+    backdrop-filter:blur(.7rem) ;
+    width: 550px;
+    padding: 40px;
+    font-size: 20px;
+}
+.img{
+    position: absolute;
+    right: 250px;
+    top: 950px;
+}
+.chair{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(chy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.chair h1{
+    font-size: 30px;
+    color: rgba(240, 248, 255, 0.732);
+    text-align: center;
+    padding: 50px;
+}
+.chairman{
+    position: absolute;
+    right: 200px;
+    top: 1650px;
+    background-color: rgba(1, 1, 1, 0.049);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.827);
+    backdrop-filter:blur(.7rem) ;
+    width: 550px;
+    padding: 20px;
+    font-size: 17px;
+}
+.img1{
+    position: absolute;
+    right: 950px;
+    top: 1650px;
+}
+.end{
+    background-color: rgb(25, 25, 25);
+    color: rgba(255, 255, 255, 0.871);
+    text-align: center;
+    padding: 20px;
+}
+.logoend{
+    width:250px ;
+    cursor: pointer;
+}

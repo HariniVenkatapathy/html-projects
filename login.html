@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="petunialogo.png" type="image/png">
+        <title>Petunia School</title>
+        <link rel="stylesheet" href="loginstyle.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="petunialogo.png" class="logo">
+                <ul>
+                    <li><a href="petuniaschoolHome.html">H O M E</a></li>
+                    <li><a href="petuniaschoolenroll.html">A D M I S S I O N S</a></li>
+                    <li><a href="academics.html">A C A D E M I C S</a></li>
+                    <li><a href="aboutus.html">A B O U T - U S</a></li>
+                    <li><a href="login.html">L O G I N</a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <section class="flex">
+                   <form action="" method="post">
+                    <h3>LOGIN</h3>
+                    <select name="option">
+                        <option value="option1">Student</option>
+                        <option value="option2">Teacher</option>
+                        <option value="option2">Parent</option>
+                    </select>
+                    <input type="text" name="email" required maxlength="30" placeholder="Enter email" class="box">
+                    <input type="password" name="password" required maxlength="30" placeholder="Enter Password" class="box">
+                    <input type="submit" value="login" name="LOGIN" class="btn">
+                    <br>
+                    <a href="forgetpassword.html">Forgot Password?</a>
+                   </form> 
+                </section>
+            </div>
+        </div>
+       <script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = form.email.value; 
+    const password = form.password.value;
+
+    const res = await fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('role', data.user.role);
+
+     
+      if (data.user.role === 'student') {
+        window.location.href = 'stddash.html';
+      } else if (data.user.role === 'parent') {
+        window.location.href = 'parentdash.html';
+      } else if (data.user.role === 'staff') {
+        window.location.href = 'teacherdash.html';
+      } else {
+        alert(' Unknown role');
+      }
+    } else {
+      alert(' ' + data.error);
+    }
+  });
+</script>
+
+
+
+    </body>
+</html>

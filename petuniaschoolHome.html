@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Petunia School</title>
+        <link rel="icon" href="petunialogo.png" type="image/png">
+        <link rel="stylesheet" href="schlhomestyle.css">
+        <script defer src="app1.js"></script>
+        
+    </head>
+    
+
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="petunialogo.png" class="logo">
+                <ul>
+                    <li><a href="petuniaschoolHome.html">H O M E</a></li>
+                    <li><a href="petuniaschoolenroll.html">A D M I S S I O N S</a></li>
+                    <li><a href="academics.html">A C A D E M I C S</a></li>
+                    <li><a href="aboutus.html">A B O U T - U S</a></li>
+                    <li><a href="login.html">L O G I N</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <section class="hidden">
+                    <h1>WELCOME  TO  PETUNIA  SCHOOLS</h1>
+                <div><a href="petuniaschoolenroll.html">
+                    <button type="button"><span></span>ADMISSIONS OPEN</button></a>
+                </div>
+                </section>
+                
+            </div>    
+        </div>
+        <section class="who">
+  <div class="who-container">
+    <div class="logoh1">
+      <h1>WHO WE ARE</h1>
+      <br>
+      <p>We are a dedicated educational institution committed to fostering a nurturing and innovative learning environment. With a focus on academic excellence and personal growth, we prepare our students to become confident, responsible, and engaged citizens. Join us in shaping the future!</p>
+    </div>
+    <div class="logoh2">
+      <h1>WHAT WE DO</h1>
+      <br>
+      <p>Our mission is to provide a transformative educational experience that empowers students to excel academically, socially, and emotionally. Through collaboration, innovation, and a commitment to excellence, we aim to inspire our students to become compassionate leaders and responsible global citizens.</p>
+    </div>
+    <div class="logoh3">
+      <h1>OUR VALUES</h1>
+      <br>
+      <p>Our vision is to be a leading educational institution recognized for cultivating a dynamic and inclusive learning environment that inspires curiosity, creativity, and critical thinking. We envision a community where every student is empowered to pursue their unique talents and interests, fostering a lifelong love of learning.</p>
+    </div>
+  </div>
+</section>  
+        </div>
+         <div class="block">
+                <div class="box">
+                <section class="flex">
+                    <p><b>FRIENDLY ENVIRONMENT</b><br>
+                        <br>
+                    "At our school, we pride ourselves on creating a warm and welcoming atmosphere where every student feels valued and supported. Our close-knit community fosters friendships that last a lifetime!"</P>
+                </section>
+            </div>
+            <div class="box1">
+                <section class="flex1">
+                    <p><b>LEARNING METHOD</b><br>
+                        <br>
+                        "Our innovative learning methods cater to every student's unique style, ensuring that no one is left behind. With a blend of hands-on activities, technology integration, and collaborative projects, we make learning engaging and effective!"</P>
+                </section>
+            </div>
+            <div class="box2">
+                <section class="flex2">
+                    <p><b>EXTRACURRICULAR ACTIVITIES</b><br>
+                        <br>
+                        "Our vibrant extracurricular programs offer students the chance to explore their passions, build confidence, and develop teamwork skills. From sports to arts, there’s something for everyone!"</P>
+                </section>
+            </div>
+        </div>
+        <div class="meww">
+            <div class="con">
+                <h1>P E T U N I A  S C H O O L S</h1>
+            </div>
+            <div class="stats-row">
+  <div class="num">
+    <h1 data-target="23579">0</h1>
+    <br>
+    <p>Students</p>
+  </div>
+
+  <div class="num1">
+    <h1 data-target="37358">0</h1>
+    <br>
+    <p>Parents</p>
+  </div>
+
+  <div class="num2">
+    <h1 data-target="386">0</h1>
+    <br>
+    <p>Staffs</p>
+  </div>
+</div>
+            
+        </div>       
+        <div class="last">
+            <img src="petunialogo.png" class="logoend">
+            <br>
+            <br>
+            <h1>Petunia School</h1>
+            <br>
+            <p>Plot No:100,little city</p>
+            <p>Ooty</p>
+            <p>Nilgiris</p>
+            <br>
+            <p>Contact Us:044 - 13332333/ 044-23555655</p>
+            <p>Email ID: petuniaschool@gmail.com</p>
+        </div>
+        <script>
+ 
+  function handleSlideIn() {
+    const slideElements = document.querySelectorAll('.logoh1, .logoh2, .logoh3, .box, .box1, .box2');
+    const screenHeight = window.innerHeight;
+
+    slideElements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < screenHeight - 100) {
+        el.classList.add('slide-in');
+      } else {
+        el.classList.remove('slide-in');
+      }
+    });
+  }
+
+ 
+  let started = false;
+  function startCountUp() {
+    if (started) return;
+
+    const meww = document.querySelector('.meww');
+    if (!meww) return;
+
+    const top = meww.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (top < screenHeight - 100) {
+      const counters = document.querySelectorAll('.num h1, .num1 h1, .num2 h1');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const start = target - 20;
+        let current = start;
+
+        const duration = 1500; 
+        const interval = 10;   
+        const step = (target - start) / (duration / interval);
+
+        const update = () => {
+          current += step;
+          if (current < target) {
+            counter.innerText = Math.ceil(current).toLocaleString();
+            setTimeout(update, interval);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        };
+
+        update();
+      });
+
+      started = true;
+    }
+  }
+
+  function handleScroll() {
+    handleSlideIn();
+    startCountUp();
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+</script>
+
+
+    </body>
+</html>
+
+
+

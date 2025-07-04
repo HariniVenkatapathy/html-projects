@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="petunialogo.png" type="image/png">
+    <title>Enroll at Petunia School</title>
+    <link rel="stylesheet" href="enrollstyle.css">
+</head>
+<body>
+    <div>
+        <div class="book">
+            <div class="navbar">
+                <img src="petunialogo.png" class="logo">
+                <ul>
+                    <li><a href="petuniaschoolHome.html">H O M E</a></li>
+                    <li><a href="petuniaschoolenroll.html">A D M I S S I O N S</a></li>
+                    <li><a href="academics.html">A C A D E M I C S</a></li>
+                    <li><a href="aboutus.html">A B O U T - U S</a></li>
+                    <li><a href="login.html">L O G I N</a></li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <section class="flex">
+                    <form id="admissionForm">
+                        <h3>ADMISSION FORM</h3>
+                        <p>Enter Student Detail</p>
+
+
+<input type="text" name="name" required maxlength="30" placeholder="Enter Student Name" class="box">
+<input type="number" name="age" required maxlength="30" placeholder="Enter Age" class="box">
+<input type="date" name="dob" required maxlength="30" placeholder="Enter DOB" class="box">
+<input type="number" name="yearly_income" required maxlength="30" placeholder="Enter Yearly Income" class="box">
+<input type="text" name="phone_number" required class="box" placeholder="Phone Number">
+
+
+<input type="text" name="aadhar" maxlength="30" placeholder="Enter Aadhar Number" class="box">
+<input type="text" name="previous_school" maxlength="100" placeholder="Enter Previous School Name" class="box">
+<input type="text" name="father_name" maxlength="50" placeholder="Enter Father Name" class="box">
+<input type="text" name="father_occupation" maxlength="50" placeholder="Enter Father Occupation" class="box">
+<input type="text" name="mother_name" maxlength="50" placeholder="Enter Mother Name" class="box">
+<input type="text" name="mother_occupation" maxlength="50" placeholder="Enter Mother Occupation" class="box">
+<input type="email" name="email" placeholder="Enter Email" class="box">
+<input type="text" name="address" class="box" placeholder="Address">
+
+
+<label class="box">What you prefer:</label><br>
+<input type="radio" id="dayScholar" name="student_status" value="dayScholar" required>
+<label for="dayScholar" class="box">Day Scholar</label><br>
+<input type="radio" id="hostel" name="student_status" value="hostel">
+<label for="hostel" class="box">Hostel Resident</label><br>
+
+
+<input type="submit" value="Submit" class="btn">
+
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        document.getElementById("admissionForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const form = e.target;
+
+            const data = {
+                name: form.name.value,
+                age: parseInt(form.age.value),
+                dob: form.dob.value,
+                aadhar: form.aadhar.value,
+                previous_school: form.previous_school.value,
+                father_name: form.father_name.value,
+                father_occupation: form.father_occupation.value,
+                mother_name: form.mother_name.value,
+                mother_occupation: form.mother_occupation.value,
+                yearly_income: parseInt(form.yearly_income.value),
+                student_status: form.student_status.value,
+                phone_number: form.phone_number.value,
+                email: form.email.value,
+                address: form.address.value
+            };
+
+            try {
+                const res = await fetch("http://localhost:5000/admissions", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+                if (res.ok) {
+                    alert("Admission Form submitted successfully!");
+                    form.reset();
+                } else {
+                    alert("Error: " + result.error);
+                }
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                alert("Something went wrong. Check console.");
+            }
+        });
+    </script>
+</body>
+</html>

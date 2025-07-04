@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Georgia ;
+}
+.pri{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(prekg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:120px ;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:aliceblue;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f45669;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    text-align: center;
+    color: aliceblue;
+}
+.content h1{
+    font-size: 26px;
+    margin-top: 50px;
+}
+.content p{
+    font-size: 15px;
+} 
+.con1{
+    margin: 150px;
+    background-color: rgba(37, 103, 161, 0.304);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.84);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.con1 h1{
+    font-size: 18px;
+}
+.con1 p{
+    font-size: 15px;
+}
+.con1:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(37, 103, 161, 0.751);
+}
+.con2{
+    position: absolute;
+    right: 550px;
+    top: 425px;
+    background-color: rgba(89, 37, 161, 0.252);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.785);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.con2 h1{
+    font-size: 18px;
+}
+.con2 p{
+    font-size: 15px;
+}
+.con2:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color:  rgba(89, 37, 161, 0.597);
+}
+.con3{
+    position: absolute;
+    right: 100px;
+    top: 425px;
+    background-color: rgba(161, 37, 111, 0.252);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.752);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.con3 h1{
+    font-size: 18px;
+}
+.con3 p{
+    font-size: 15px;
+}
+.con3:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color:  rgba(161, 37, 111, 0.714);
+}
+.primary{
+    width:100%;
+    height:110vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(primary.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.primary h1{
+    font-size: 25px;
+    text-align: center;
+    color: rgba(240, 248, 255, 0.737);
+    padding-top: 40px;
+}
+.primary p{
+    font-size: 15px;
+    text-align: center;
+    color: rgba(240, 248, 255, 0.807);
+}
+.onj{
+    position: absolute;
+    right: 300px;
+    top: 940px;
+    background-color: rgba(161, 37, 78, 0.333);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.619);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.onj h1{
+    font-size: 18px;
+}
+.onj p{
+    font-size: 15px;
+}
+.onj:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(161, 37, 78, 0.833);
+}
+
+.objective{
+    position: absolute;
+    right: 870px;
+    top: 940px;
+    background-color: rgba(39, 30, 107, 0.323);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.622);
+    backdrop-filter:blur(.7rem) ;
+    width: 500px;
+    padding: 25px;
+}
+.objective:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(39, 30, 107, 0.816);
+}
+.env{
+    position: absolute;
+    right: 140px;
+    top: 1140px;
+    background-color: rgba(214, 45, 45, 0.205);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.622);
+    backdrop-filter:blur(.7rem) ;
+    width: 500px;
+    padding: 25px;
+}
+.env:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(214, 45, 45, 0.81);
+}
+.img{
+    float: left;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.higher{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(higher2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.higher h1{
+    font-size: 25px;
+    text-align: center;
+    color: rgba(240, 248, 255, 0.737);
+    padding-top: 40px;
+}
+.higher p{
+    font-size: 15px;
+    text-align: center;
+    color: rgba(240, 248, 255, 0.807);
+}
+.med{
+    position: absolute;
+    right: 1000px;
+    top: 1625px;
+    background-color: rgba(161, 91, 37, 0.366);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.619);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.med h1{
+    font-size: 18px;
+}
+.med p{
+    font-size: 15px;
+}
+.med:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(161, 91, 37, 0.816);
+}
+.jee{
+    position: absolute;
+    right: 1000px;
+    top: 1825px;
+    background-color: rgba(37, 161, 68, 0.311);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.619);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.jee h1{
+    font-size: 18px;
+}
+.jee p{
+    font-size: 15px;
+}
+.jee:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(37, 161, 68, 0.816);
+}
+.gov{
+    position: absolute;
+    right: 1000px;
+    top: 2000px;
+    background-color: rgba(37, 161, 115, 0.323);
+    text-align: center;
+    color: rgba(240, 248, 255, 0.619);
+    backdrop-filter:blur(.7rem) ;
+    width: 350px;
+    padding: 20px;
+}
+.gov h1{
+    font-size: 18px;
+}
+.gov p{
+    font-size: 15px;
+}
+.gov:hover{
+    backdrop-filter:blur(.7rem) ;
+    background-color: rgba(37, 161, 115, 0.816);
+}
+.noo{
+    color: rgba(240, 248, 255, 0.364);
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    right: 220px;
+    top: 1730px;
+}
+.num {
+  position: absolute;
+  right: 630px;
+  top: 1850px;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.619);
+  width: 180px;
+  padding: 10px;
+}
+
+.num1 {
+  position: absolute;
+  right: 400px;
+  top: 1850px;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.619);
+  width: 180px;
+  padding: 10px;
+}
+
+.num2 {
+  position: absolute;
+  right: 170px;
+  top: 1850px;
+  text-align: center;
+  color: rgba(240, 248, 255, 0.619);
+  width: 180px;
+  padding: 10px;
+}
+
+.num h1, .num1 h1, .num2 h1 {
+  font-size: 60px;
+}
+
+.num p, .num1 p, .num2 p {
+  font-size: 20px;
+}
+
+
+.ach{
+    width:100%;
+    height:110vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(chy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img1{
+    position: absolute;
+    top: 2500px;
+    left: 200px;
+    border-radius: 20px;
+}
+.img2{
+    position: absolute;
+    top: 2500px;
+    left: 620px;
+    border-radius: 20px;
+}
+.img3{
+    position: absolute;
+    top: 2500px;
+    left: 1050px;
+    border-radius: 20px;
+}
+.t1{
+    position: absolute;
+    top: 2780px;
+    left: 200px;
+    color: aliceblue;
+    font-size: 15px;
+}
+.t2{
+    position: absolute;
+    top: 2780px;
+    left: 630px;
+    color: aliceblue;
+    font-size: 15px;
+}
+.t3{
+    position: absolute;
+    top: 2780px;
+    left: 1030px;
+    color: aliceblue;
+    font-size: 15px;
+}
+.top{
+    color: aliceblue;
+    font-size: 15px;
+    text-align: center;
+    padding: 100px;
+}
+.end{
+    background-color: rgba(15, 15, 15, 0.936);
+    color: rgba(255, 255, 255, 0.847);
+    text-align: center;
+    padding: 20px;
+}
+.logoend{
+    width:250px ;
+    cursor: pointer;
+}
